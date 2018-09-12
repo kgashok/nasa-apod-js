@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>APOD Call</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <main>
+      <b>API URL:</b>
+      <pre id="reqObject"></pre>
+      <img id="apod_img_id" width="250px"/>
+      <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+      <p id="copyright"></p>
+      <h3 id="apod_title"></h3>
+      <p id="apod_explanation"></p>
+      <br/>
+      <b>Return Object:</b>
+      <pre id="returnObject"></pre>
+    </main>
+    <footer>
+      Made with <a href="https://open.nasa.gov/open-data/">NASA Web APIs</a>!
+    </footer>
+    <!-- include the Glitch button to show what the webpage is about and
+to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
