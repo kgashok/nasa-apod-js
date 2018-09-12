@@ -13,7 +13,7 @@ Your JAMS Project
 
 **J** - Javascript (bring the console log into HTML, can you?)  
 **A** - any public API (aka functions, 5th construct) that provides useful information  
-**M** - Markup using HTML and CSS  (versus this Markdown file)
+**M** - Markup using HTML and CSS  (versus this Markdown file)  
 **S** - SQL for storing information in the backend
 
 ### ← README.md
