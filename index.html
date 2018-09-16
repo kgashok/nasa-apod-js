@@ -2,16 +2,25 @@
   <head>
     <meta charset="utf-8">
     <title>APOD Call</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>  
   <body>
+    <header>
+      Want to provide feedback? 
+      Click <a target="_" href="https://github.com/kgashok/nasa-apod-js/issues/new">here</a>
+   
+    </header>
     <main>
+      <br>
       <b>API URL:</b>
       <pre id="reqObject"></pre>
       <img id="apod_img_id" width="250px"/>
@@ -19,7 +28,7 @@
       <p id="copyright"></p>
       <h3 id="apod_title"></h3>
       <p id="apod_explanation"></p>
-      <br/>
+      <br>
       <b>Return Object:</b>
       <pre id="returnObject"></pre>
     </main>

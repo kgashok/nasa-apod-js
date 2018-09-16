@@ -1,3 +1,16 @@
+# To Do 
+
+Fix performance issues
+  - https://developers.google.com/web/fundamentals/performance/rail 
+  - https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#timing-explanation - for troubleshooting network errors and retreival
+  
+Fix the Mixed Content issue 
+  - https://developers.google.com/web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+    - https://stackoverflow.com/questions/1105934/ajax-using-https-on-an-http-page?rq=1
+    - https://developer.yahoo.com/javascript/json.html#callbackparam 
+  
+
+
 JAMing on Glitch
 =================
 
