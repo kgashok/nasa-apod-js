@@ -36,7 +36,7 @@ console.log("key: " + key);
 // move it to EST time, that way, yesterday need not be calculated? 
 let today = new Date();
 let date = today;
-date.setDate(today.getUTCDate()-1 ); // depending upon time of day, it may revert to yesterday
+date.setDate(today.getUTCDate()-1); // depending upon time of day, it may revert to yesterday
 let dateString = date.toISOString().slice(0, 10);
 console.log("date " + dateString);
 /*dateString = new Date().toLocaleString('en-KOR', { timeZone: "America/New_York" })
@@ -78,12 +78,11 @@ $.ajax({
     $("#apod_explanation").text(result.explanation);
     $("#apod_title").text(result.title);
   },
-  error: function (XMLHttpRequest, textStatus, errorThrown) {
-    alert("Request: " + 
-          XMLHttpRequest.toString() + 
-          "\n\nStatus: " + 
-          textStatus + 
-          "\n\nError: " + errorThrown
-         );
+  error: function(jqXHR,error, errorThrown) {  
+    if(jqXHR.status && jqXHR.status===400){
+      alert(jqXHR.responseText); 
+    }else{
+      alert("Something went wrong!");
+    }
   }
 });
