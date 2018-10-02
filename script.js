@@ -6,44 +6,20 @@ console.log('hi');
 
 var nasaurl = "https://api.nasa.gov/planetary/apod?api_key=";
 var key="fsIHc9OGpk3nYHIeZa3mZUm2FdX4yDzSybKHkbUG";
+//console.log("key: " + key);
+
 nasaurl +=key+"&";
 //var url = nasaurl;
-
 var gnurl = "https://cors.io/?http://nasa-apod-flask.glitch.me/v1/apod?";
 //var gnurl = "https://nasa-apod-flask.glitch.me/v1/apod?";
 //var gnurl = "https://cors.io/?https://apod.nasa.gov/apod/ap180911.html";
-var url = gnurl;
-console.log("key: " + key);
+//var url = nasaurl+key+"&"+"&"+"count=5";
 
-// --------------------------------------
-// Different experiments to arrive at the date to use for the API call
-//   - none of them are satisfactory 
-//
-//var utc = new Date().toJSON().slice(0,10); //.replace(/-/g,'/');
-//console.log("date: " + utc);
-//var date ="date=2018-09-11"
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getdate
-// move it to EST time, that way, yesterday need not be calculated? 
-//
-/*
-dateString = new Date().toLocaleString('en-KOR', { timeZone: "America/New_York" })
-                       .slice(0,9)
-                       .replace(/( \.)/g,'-')
-                       .split("-")
-                       //.reverse()
-                       .join("-");
-*/
-let today = new Date();
-let date = today;
-date.setDate(today.getUTCDate()); // depending upon time of day, it may revert to yesterday
-let dateString = date.toISOString().slice(0, 10);
-console.log("date " + dateString);
-//dateString="2018-09-06";
-//url += "date="+dateString+"&";
+//var url = gnurl;
+var url = "https://api.nasa.gov/planetary/apod?api_key="+key;
+
 
 console.log("url " + url); 
-//var url = nasaurl+key+"&"+"&"+"count=5";
-//var url = "https://api.nasa.gov/planetary/apod?api_key=NASA_KEY";
 $.ajax({
   type: "GET",
   url: url,
@@ -80,3 +56,30 @@ $.ajax({
     }
   }
 });
+
+
+// --------------------------------------
+// Different experiments to arrive at the date to use for the API call
+//   - none of them are satisfactory 
+//
+//var utc = new Date().toJSON().slice(0,10); //.replace(/-/g,'/');
+//console.log("date: " + utc);
+//var date ="date=2018-09-11"
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getdate
+// move it to EST time, that way, yesterday need not be calculated? 
+//
+/*
+dateString = new Date().toLocaleString('en-KOR', { timeZone: "America/New_York" })
+                       .slice(0,9)
+                       .replace(/( \.)/g,'-')
+                       .split("-")
+                       //.reverse()
+                       .join("-");
+*/
+let today = new Date();
+let date = today;
+date.setDate(today.getUTCDate()); // depending upon time of day, it may revert to yesterday
+let dateString = date.toISOString().slice(0, 10);
+console.log("date " + dateString);
+//dateString="2018-09-06";
+//url += "date="+dateString+"&";
