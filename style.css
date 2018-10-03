@@ -21,3 +21,14 @@ img.daily {
   width: 400px;
 }
 
+header {
+  background-color: beige;
+}
+
+main { 
+  background-color: whitesmoke;
+}
+
+footer { 
+  background-color: #ffaa00;
+}
