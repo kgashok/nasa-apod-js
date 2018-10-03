@@ -4,6 +4,13 @@
 // prints "hi" in the browser's dev tools console
 console.log('hi');
 
+/********************************************************************
+ * STEP 1 
+  There are several choices to be considered for the URL from which data 
+  must be used to display the astronomical picture of the day 
+  
+ *******************************************************************
+ */
 var nasaurl = "https://api.nasa.gov/planetary/apod?api_key=";
 var key="fsIHc9OGpk3nYHIeZa3mZUm2FdX4yDzSybKHkbUG";
 //console.log("key: " + key);
@@ -13,11 +20,18 @@ nasaurl +=key+"&";
 var gnurl = "https://cors.io/?http://nasa-apod-flask.glitch.me/v1/apod?";
 //var gnurl = "https://nasa-apod-flask.glitch.me/v1/apod?";
 //var gnurl = "https://cors.io/?https://apod.nasa.gov/apod/ap180911.html";
-//var url = nasaurl+key+"&"+"&"+"count=5";
+//var url = nasaurl+key+"count=5";
 
 //var url = gnurl;
 var url = "https://api.nasa.gov/planetary/apod?api_key="+key;
 
+
+/********************************************************************
+ * STEP 2 
+ Make the AJAX call to and get the data and use it to update several 
+ HTML elements in the webpage 
+ *******************************************************************
+ */
 
 console.log("url " + url); 
 $.ajax({
@@ -58,6 +72,17 @@ $.ajax({
 });
 
 
+/****************************************************
+ * STEP 1.5 
+   ENHANCEMENT SUGGESTION 
+   Use a date to specify different images fromt the past 
+   When an invalid date is used, errors will occur 
+   and they need to be handled gracefully
+   
+   Once you have figured out how you want to form your date 
+   string, move the code below to above Step 2 (before the AJAX call)
+ ***************************************************
+ */
 // --------------------------------------
 // Different experiments to arrive at the date to use for the API call
 //   - none of them are satisfactory 
