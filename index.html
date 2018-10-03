@@ -28,7 +28,7 @@
       <p>
         <i>(The text info that is returned when visiting the above link is presented with markup below)</i>
       </p>
-      <img id="apod_img_id" width="250px"/>
+      <img id="apod_img_id" width="250px" class="page-body">
       <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
       <p id="copyright"></p>
       <h3 id="apod_title"></h3>
@@ -41,6 +41,14 @@
     <footer>
       Made with <a href="https://open.nasa.gov/open-data/">NASA Web APIs</a>!
     </footer>
+    
+    <script src = "https://cdn.rawgit.com/hakimel/zoom.js/master/js/zoom.js" ></script>
+    <script>
+			document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				zoom.to({ element: event.target });
+			} );
+		</script>
     <!-- include the Glitch button to show what the webpage is about and
         to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
